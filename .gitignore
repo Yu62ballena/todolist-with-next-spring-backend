@@ -40,4 +40,4 @@ build/
 
 
 ### Local History ###
-.history/
+.history/*.code-workspace
