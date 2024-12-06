@@ -35,7 +35,7 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(anthz -> anthz
-                .requestMatchers("/actuator/health").permitAll() 
+            .requestMatchers("/actuator/health").permitAll() 
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/users/**").permitAll() 
                 .requestMatchers("/api/tasks/**").authenticated() 
