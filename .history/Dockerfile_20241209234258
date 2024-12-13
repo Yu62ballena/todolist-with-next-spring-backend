@@ -1,0 +1,13 @@
+# ビルドステージ
+FROM amazoncorretto:17-alpine AS build
+WORKDIR /app
+COPY . .
+RUN apk add --no-cache maven
+RUN mvn clean package -DskipTests
+
+# 実行ステージ
+FROM amazoncorretto:17-alpine-jre
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
