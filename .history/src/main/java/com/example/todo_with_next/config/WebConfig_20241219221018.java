@@ -14,12 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
       .allowedOrigins(
-        frontendUrl,
-        "https://uptimerobot.com"
+        frontendU
       )
-      .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
-      .allowedHeaders("*")
-      .allowCredentials(true)
-      .maxAge(3600);
   }
 }

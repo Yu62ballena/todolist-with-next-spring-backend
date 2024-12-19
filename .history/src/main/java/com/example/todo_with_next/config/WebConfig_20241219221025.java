@@ -15,11 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
     registry.addMapping("/**")
       .allowedOrigins(
         frontendUrl,
-        "https://uptimerobot.com"
+        "https://"
       )
-      .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
-      .allowedHeaders("*")
-      .allowCredentials(true)
-      .maxAge(3600);
   }
 }

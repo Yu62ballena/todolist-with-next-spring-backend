@@ -17,9 +17,6 @@ public class WebConfig implements WebMvcConfigurer {
         frontendUrl,
         "https://uptimerobot.com"
       )
-      .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
-      .allowedHeaders("*")
-      .allowCredentials(true)
-      .maxAge(3600);
+      
   }
 }
